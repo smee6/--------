@@ -2,7 +2,7 @@ let now = new Date();
 let red = "rgb(255, 123, 127)";
 let blue = "rgb(72, 235, 252)";
 
-document.querySelector(".time").innerHTML = now + " Refresh 1min";
+document.querySelector(".time").innerHTML = now;
 //비트코인 시세
 fetch("https://crix-api-endpoint.upbit.com/v1/crix/candles/days/?code=CRIX.UPBIT.KRW-BTC").then((response) => response.json())
     .then((data) => {
