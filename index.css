@@ -21,6 +21,13 @@ table {
     text-align: right;
 }
 
+.chartFrame {
+    border: solid 1px rgba(22, 68, 18, 0.95);
+    border-radius: 5px;
+    background-color: rgba(143, 196, 139, 0.95);
+    opacity: 0.9;
+}
+
 .ticker {
     text-align: center;
 }
@@ -41,7 +48,7 @@ table tr:hover td {
 
 .toppest {
     border-bottom: dotted 1.5px;
-    opacity: 0.8;
+    opacity: 0.7;
     text-align: center;
 }
 
@@ -87,7 +94,7 @@ table tr:hover td {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.6rem;
-    border: dotted 0.15rem rgb(86, 131, 98);
+    border: dotted 0.15rem rgb(86, 131, 98, 0.4);
     background-color: rgb(18, 32, 21);
     opacity: 0.9;
 }
@@ -133,6 +140,7 @@ table tr:hover td {
 
 .title {
     font-size: 24px;
+    padding-left: 18px;
 }
 
 .title b {
@@ -146,8 +154,51 @@ table tr:hover td {
 
 .detail {
     background-color: inherit;
-    margin: 1rem;
+    margin: 0 1rem;
     font-size: 1rem;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-box {
+    width: 23%;
+    height: 100px;
+    border: solid 1px rgba(22, 68, 18, 0.95);
+    margin: 15px 3px;
+    border-radius: 5px;
+    background-color: rgba(22, 68, 18, 0.95);
+    opacity: 0.9;
+}
+
+.mid-box {
+    width: 31%;
+    height: 100px;
+    border: solid 1px rgba(22, 68, 18, 0.95);
+    margin: 15px 3px;
+    border-radius: 5px;
+    background-color: rgba(22, 68, 18, 0.95);
+    opacity: 0.9;
+}
+
+.bg-box {
+    width: 48%;
+    height: 200px;
+    border: solid 1px rgba(22, 68, 18, 0.95);
+    margin: 15px 3px;
+    border-radius: 5px;
+    background-color: rgba(22, 68, 18, 0.95);
+    opacity: 0.9;
+}
+
+.king-box {
+    width: 98%;
+    height: 200px;
+    border: solid 1px rgba(22, 68, 18, 0.95);
+    margin: 15px 3px;
+    border-radius: 5px;
+    background-color: rgba(22, 68, 18, 0.95);
+    opacity: 0.9;
 }
 
 .detail li {
