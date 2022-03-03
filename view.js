@@ -20,4 +20,4 @@ floatbutton.addEventListener('click', function() {
     scrollTo(0, 0);
 });
 
-setTimeout(function() { location.reload(); }, 15000); //새로고침 => 나중에 웹소켓 써보자
+setTimeout(function() { location.reload(); }, 60000); //새로고침 => 나중에 웹소켓 써보자

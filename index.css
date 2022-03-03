@@ -45,6 +45,10 @@ table tr:hover td {
     text-align: center;
 }
 
+.logo:hover {
+    color: rgba(41, 199, 26, 0.95);
+}
+
 .wrapper {
     align-self: center;
     display: flex;
@@ -114,6 +118,10 @@ table tr:hover td {
     cursor: pointer;
 }
 
+.menu-button:hover {
+    color: rgba(41, 199, 26, 0.95);
+}
+
 .content {
     padding: 3rem;
     margin: 0;
@@ -169,4 +177,8 @@ table tr:hover td {
     border: dotted 2.1px rgb(86, 131, 98);
     background-color: rgb(18, 32, 21);
     opacity: 0.8;
+}
+
+.floating:hover {
+    color: rgba(41, 199, 26, 0.95);
 }

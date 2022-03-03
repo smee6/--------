@@ -2,7 +2,7 @@ let now = new Date();
 let red = "rgb(255, 123, 127)";
 let blue = "rgb(72, 235, 252)";
 
-document.querySelector(".time").innerHTML = " : " + " 기준 시간은 " + now + " 입니다. 매 15초마다 갱신됩니다. (업비트 기준)";
+document.querySelector(".time").innerHTML = " : " + " 기준 시간은 " + now + " 입니다. 매 분 갱신됩니다. (업비트 기준)";
 //비트코인 시세
 fetch("https://crix-api-endpoint.upbit.com/v1/crix/candles/days/?code=CRIX.UPBIT.KRW-BTC").then((response) => response.json())
     .then((data) => {
