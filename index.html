@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script async src="./api.js"></script>
+    <script defer src="./view.js"></script>
+    <link href="./index.css" rel="stylesheet" type="text/css">
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@200&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="toppest"><b> 
+        US 1$ </b>
+        <a class="nowP"></a>원
+        <a class="chanRate"></a>% <b>
+        TQQQ </b>
+        <a class="nowTQ"></a>$
+        <a class="chanTQ"></a>
+        <b>
+        QQQ </b>
+        <a class="nowQ"></a>$
+        <a class="chanQ"></a>
+        <b>
+        SQQQ </b>
+        <a class="nowSQ"></a>$
+        <a class="chanSQ"></a>
+        <b>
+        SPY </b>
+        <a class="nowSPY"></a>$
+        <a class="chanSPY"></a>
+
+    </div>
+    <div class="logo" tabindex="1"> ₿it Summary</div>
+    <div class="wrapper">
+        <div class="sec-head">
+            <div class="menu common-line">
+                <a class="menu-button">  Coin Price  </a>
+                <a class="menu-button">  Analytics  </a>
+                <a class="menu-button">  News Feed  </a>
+            </div>
+        </div>
+        <div class="sec-body">
+            <div class="content common-line" id="title1">
+                <a class="title" tabindex="2"><b>Coin Price</b></a>
+                <a class="time"></a>
+                <div class="detail">
+                    <table>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Open Price (KRW)</th>
+                            <th>Now Price (KRW)</th>
+                            <th>Rate (%)</th>
+                        </tr>
+                        <tr>
+                            <td class="ticker">BTC</td>
+                            <td>
+                                <a class="btcPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="btcCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="btcFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">ETH</td>
+                            <td>
+                                <a class="ethPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="ethCurPrice"></a> Krw </td>
+                            <td>
+                                <a class="ethFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">EOS</td>
+                            <td>
+                                <a class="eosPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="eosCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="eosFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">XRP</td>
+                            <td>
+                                <a class="xrpPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="xrpCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="xrpFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">ADA</td>
+                            <td>
+                                <a class="adaPrvPrice"></a>Krw</td>
+                            <td>
+                                <a class="adaCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="adaFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">DOGE</td>
+                            <td>
+                                <a class="dogePrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="dogeCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="dogeFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">MATIC</td>
+                            <td>
+                                <a class="maticPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="maticCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="maticFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">ALGO</td>
+                            <td>
+                                <a class="algoPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="algoCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="algoFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">ATOM</td>
+                            <td>
+                                <a class="atomPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="atomCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="atomFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">SOL</td>
+                            <td>
+                                <a class="solPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="solCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="solFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">DOT</td>
+                            <td>
+                                <a class="dotPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="dotCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="dotFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">MANA</td>
+                            <td>
+                                <a class="manaPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="manaCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="manaFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">TRX</td>
+                            <td>
+                                <a class="trxPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="trxCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="trxFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">SAND</td>
+                            <td>
+                                <a class="sandPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="sandCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="sandFluc"></a> %</td>
+                        </tr>
+                        <tr>
+                            <td class="ticker">ETC</td>
+                            <td>
+                                <a class="etcPrvPrice"></a> Krw</td>
+                            <td>
+                                <a class="etcCurPrice"></a> Krw</td>
+                            <td>
+                                <a class="etcFluc"></a> %</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div class="content common-line" id="title2">
+                <a class="title" tabindex="3">Margin</a>
+                <div class="detail">
+                    <li>Long</li>
+                    <li>Short</li>
+                </div>
+            </div>
+            <div class="content common-line" id="title3">
+                <a class="title" tabindex="4">News</a>
+                <div class="detail">
+                    <li>article</li>
+                </div>
+            </div>
+        </div>
+        <div class="sec-footer">
+            <div class="footcontent common-line">
+                <a>
+                    © 2022 Seomyungin. All Rights Reserved.<br>
+                    서명인 개인프로젝트
+                </a>
+
+            </div>
+        </div>
+        <div class="floating" tabindex="5">
+            ▲
+        </div>
+    </div>
+
+</body>
+
+</html>

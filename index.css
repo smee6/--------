@@ -1,0 +1,172 @@
+* {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 3, 17);
+    color: rgb(73, 238, 73);
+    scroll-behavior: smooth;
+}
+
+a {
+    background-color: inherit;
+}
+
+li {
+    background-color: inherit;
+}
+
+table {
+    background-color: inherit;
+    width: 100%;
+    text-align: right;
+}
+
+.ticker {
+    text-align: center;
+}
+
+table tr th {
+    text-align: center;
+    background-color: rgb(18, 32, 21);
+}
+
+table tr td {
+    background-color: rgb(18, 32, 21);
+    border-bottom: dotted 2px rgb(73, 238, 73, 0.5);
+}
+
+table tr:hover td {
+    color: rgba(41, 199, 26, 0.95);
+}
+
+.toppest {
+    border-bottom: dotted 1.5px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    min-width: 320px;
+    justify-content: center;
+    padding-top: 0.5rem;
+    min-width: 600px;
+    align-items: center;
+}
+
+.sec-head {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-width: 900px;
+}
+
+.sec-body {
+    margin-top: 3rem;
+    flex: 8;
+}
+
+.sec-footer {
+    margin-top: auto;
+    flex: 1;
+    min-width: 900px;
+}
+
+.common-line {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.6rem;
+    border: dotted 0.15rem rgb(86, 131, 98);
+    background-color: rgb(18, 32, 21);
+    opacity: 0.9;
+}
+
+.logo {
+    margin-top: 1rem;
+    padding: 0;
+    font-size: 36px;
+    text-align: center;
+}
+
+.menu {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    opacity: 0.85;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-button {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+.content {
+    padding: 3rem;
+    margin: 0;
+    margin-bottom: 4rem;
+    min-height: 1200px;
+    max-width: 900px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.title b {
+    background-color: inherit;
+    text-shadow: 1.5px 0.3px 1.8px rgba(166, 255, 0, 0.808)
+}
+
+#title1 {
+    min-height: 300px;
+}
+
+.detail {
+    background-color: inherit;
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.detail li {
+    font-size: 1.2rem;
+    list-style-type: none;
+    border-bottom: dotted 2px rgb(73, 238, 73, 0.5);
+}
+
+.detail li b {
+    background-color: inherit;
+    text-shadow: 1.5px 0.5px 1.8px rgba(166, 255, 0, 0.808)
+}
+
+.footcontent {
+    text-align: center;
+}
+
+.floating {
+    cursor: pointer;
+    font-size: large;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 70%;
+    position: fixed;
+    right: 2%;
+    top: 94%;
+    border: dotted 2.1px rgb(86, 131, 98);
+    background-color: rgb(18, 32, 21);
+    opacity: 0.8;
+}
