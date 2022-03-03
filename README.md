@@ -1,4 +1,4 @@
-# coinMonitor (가제)
+# BitcoinSummary - coinMonitor (가제/작업중)
 
 (Demo): https://smee6.github.io/BitcoinSummary/
 
@@ -15,3 +15,10 @@ Key 없는 Api들을 이용해서 코인 가격 시세와 주식정보를 한번
 3. 실제로 본인이 필요한 서비스를 간단하게 구현하는 것이 목표.
 
 4. CSS flex를 이용해 반응형으로 제작.
+
+<todo>
+  분석,뉴스피드 탭 추가
+  인터렉션 추가
+  기능 추가
+  css,레이아웃 수정
+  코드 리팩토링
