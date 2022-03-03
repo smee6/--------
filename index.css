@@ -194,6 +194,10 @@ table tr:hover td {
     .wrapper {
         min-width: none;
     }
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .toppest {
         font-size: 10px;
     }
