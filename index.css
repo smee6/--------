@@ -57,7 +57,6 @@ table tr:hover td {
     min-width: 320px;
     justify-content: center;
     padding-top: 0.5rem;
-    min-width: 600px;
     align-items: center;
 }
 
