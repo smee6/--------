@@ -127,6 +127,7 @@ table tr:hover td {
     margin-bottom: 4rem;
     min-height: 1200px;
     max-width: 900px;
+    min-width: 720px;
 }
 
 .title {
@@ -187,16 +188,21 @@ table tr:hover td {
         width: 100%;
         min-width: 0;
     }
+    .sec-body {
+        width: 100%;
+    }
     .sec-footer {
         width: 100%;
         min-width: 0;
     }
     .wrapper {
-        min-width: none;
+        min-width: 0;
     }
     .content {
         padding-left: 0;
         padding-right: 0;
+        min-width: 0;
+        width: 100%;
     }
     .toppest {
         font-size: 10px;
