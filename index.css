@@ -69,6 +69,7 @@ table tr:hover td {
     margin: 0;
     margin-bottom: 0;
     padding-bottom: 0;
+    min-width: 760px;
 }
 
 .sec-body {
@@ -79,6 +80,7 @@ table tr:hover td {
 .sec-footer {
     margin-top: auto;
     flex: 1;
+    min-width: 760px;
 }
 
 .common-line {
@@ -178,4 +180,18 @@ table tr:hover td {
 
 .floating:hover {
     color: rgba(41, 199, 26, 0.95);
+}
+
+@media (max-width: 900px) {
+    .sec-head {
+        width: 100%;
+        min-width: 0;
+    }
+    .sec-footer {
+        width: 100%;
+        min-width: 0;
+    }
+    .wrapper {
+        min-width: none;
+    }
 }
