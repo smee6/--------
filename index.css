@@ -172,6 +172,22 @@ table tr:hover td {
     opacity: 0.9;
 }
 
+.small-box:hover {
+    background-color: rgba(50, 114, 45, 0.95);
+}
+
+.mid-box:hover {
+    background-color: rgba(50, 114, 45, 0.95);
+}
+
+.bg-box:hover {
+    background-color: rgba(50, 114, 45, 0.95);
+}
+
+.king-box:hover {
+    background-color: rgba(50, 114, 45, 0.95);
+}
+
 .mid-box {
     width: 29%;
     height: 100px;
