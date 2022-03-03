@@ -69,7 +69,6 @@ table tr:hover td {
     margin: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    min-width: 760px;
 }
 
 .sec-body {
@@ -80,7 +79,6 @@ table tr:hover td {
 .sec-footer {
     margin-top: auto;
     flex: 1;
-    min-width: 900px;
 }
 
 .common-line {
