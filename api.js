@@ -374,3 +374,12 @@ fetch("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?
     document.querySelector(".nowSPY").innerHTML = price;
     document.querySelector(".chanSPY").innerHTML = chanRate;
 });
+fetch("https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=AAPL&requestMethod=itv&noform=1&partnerId=2&fund=1&exthrs=1&output=json&events=1").then((res) => res.json()).then((data) => {
+    let stock = data.FormattedQuoteResult.FormattedQuote[0];
+    console.log(stock);
+    let price = stock.last;
+    let chanRate = stock.change_pct;
+
+    document.querySelector(".nowAAPL").innerHTML = price;
+    document.querySelector(".chanAAPL").innerHTML = chanRate;
+});
