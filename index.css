@@ -194,4 +194,13 @@ table tr:hover td {
     .wrapper {
         min-width: none;
     }
+    .toppest {
+        font-size: 10px;
+    }
+    a {
+        font-size: small;
+    }
+    table {
+        font-size: small;
+    }
 }
