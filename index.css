@@ -254,9 +254,6 @@ table tr:hover td {
 }
 
 @media (max-width: 900px) {
-    * {
-        -webkit-overflow-scrolling: touch;
-    }
     .sec-head {
         width: 100%;
         min-width: 0;
