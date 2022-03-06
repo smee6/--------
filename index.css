@@ -76,7 +76,7 @@ table tr:hover td {
     margin: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    min-width: 760px;
+    min-width: 780px;
 }
 
 .sec-body {
@@ -94,7 +94,6 @@ table tr:hover td {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.6rem;
-    border: dotted 0.15rem rgb(86, 131, 98, 0.4);
     background-color: rgb(18, 32, 21);
     opacity: 0.9;
 }
