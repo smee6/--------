@@ -16,6 +16,9 @@ button[1].addEventListener('click', function() {
 button[2].addEventListener('click', function() {
     content3.scrollIntoView(true);
 });
+button[3].addEventListener('click', function() {
+    scrollTo(0, 0);
+});
 floatbutton.addEventListener('click', function() {
     scrollTo(0, 0);
 });

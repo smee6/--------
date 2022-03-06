@@ -8,11 +8,11 @@ let stockList = ["TQQQ", "QQQ", "SQQQ", "SPY", "AAPL"]
 document.querySelector(".time").innerHTML = now;
 
 //로직
-coinList.forEach(v => {
-    getCoinData(upbiturl, v);
+coinList.forEach(coin => {
+    getCoinData(upbiturl, coin);
 });
-stockList.forEach(v => {
-    getStockData(v);
+stockList.forEach(stock => {
+    getStockData(stock);
 });
 
 
@@ -44,7 +44,6 @@ function getStockData(stockname) {
         let stock = data.FormattedQuoteResult.FormattedQuote[0];
         let price = stock.last;
         let chanRate = stock.change_pct;
-
         document.querySelector(".now" + stockname).innerHTML = price;
         document.querySelector(".chan" + stockname).innerHTML = chanRate;
     });
@@ -58,7 +57,6 @@ fetch("https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD").t
         let nowP = exchanRate.basePrice;
         let openP = exchanRate.openingPrice;
         let chanRate = exchanRate.signedChangeRate * 100;
-
         document.querySelector(".nowP").innerHTML = nowP;
         document.querySelector(".chanRate").innerHTML = chanRate.toFixed(2);
     });
