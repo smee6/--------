@@ -23,4 +23,4 @@ floatbutton.addEventListener('click', function() {
     scrollTo(0, 0);
 });
 
-setTimeout(function() { location.reload(); }, 60000); //새로고침 => 나중에 웹소켓 써보자
+setTimeout(function() { location.reload(); }, 180000); //3분마다 새로고침 => 나중에 웹소켓 써보자

@@ -188,6 +188,10 @@ table tr:hover td {
     background-color: rgba(50, 114, 45, 0.95);
 }
 
+.box-no-back {
+    background-color: rgba(0, 0, 0, 1) !important;
+}
+
 .mid-box {
     width: 29%;
     height: 100px;
