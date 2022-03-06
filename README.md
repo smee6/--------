@@ -57,9 +57,7 @@ Key 없는 Api들을 이용해서 코인 가격 시세와 주식정보를 한번
 
 2. 좀더 지저분하게 꽉 채웠으면 좋겠음 . 의도적으로 좀 조잡한 디자인을 원해
 
-
-
-![image](https://user-images.githubusercontent.com/65226760/156519567-60689d8b-5bd1-4297-afb8-1d3dab6dd926.png)
+<img width="644" alt="스크린샷 2022-03-06 오후 5 42 53" src="https://user-images.githubusercontent.com/65226760/156915710-32555ac1-3524-4404-92b7-e16e595fd8bf.png">
 
 
 1. 업비트와 해외거래소 Api를 실시간으로 받아와서 클라이언트에서 간단한 수식을 사용해서 index지수나 특정 지표들을 계산하여 보여줌.
