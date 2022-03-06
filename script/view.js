@@ -19,8 +19,6 @@ button[2].addEventListener('click', function() {
 button[3].addEventListener('click', function() {
     scrollTo(0, 0);
 });
-floatbutton.addEventListener('click', function() {
-    scrollTo(0, 0);
-});
+
 
 setTimeout(function() { location.reload(); }, 180000); //3분마다 새로고침 => 나중에 웹소켓 써보자
