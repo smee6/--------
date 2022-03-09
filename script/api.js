@@ -3,7 +3,7 @@ let red = "rgb(255, 123, 127)";
 let blue = "rgb(72, 235, 252)";
 let upbiturl = "https://crix-api-endpoint.upbit.com/v1/crix/candles/days/?code=CRIX.UPBIT.KRW-"
 let coinList = ["btc", "eth", "eos", "xrp", "ada", "doge", "matic", "algo", "atom", "sol", "dot", "mana", "trx", "sand", "etc"];
-let gimpList = ["Btc", "Eth"];
+let gimpList = ["Btc"];
 let stockList = ["TQQQ", "QQQ", "SQQQ", "SPY", "AAPL"];
 let gimpBTC;
 let gimpETH;
@@ -27,7 +27,9 @@ function playLogic() {
     gimpList.forEach(coin => {
         getUsdCoinData(coin);
     });
-    return gimpAll();
+    return setTimeout(() => {
+        gimpAll();
+    }, 0);
 }
 
 function gimpAll() {
@@ -42,11 +44,6 @@ function gimpCal(coinName) {
     let usdC = sessionStorage.getItem("usdC");
     let coinAdUsd = usdC * coinUsd;
     let coinRate = ((coinKrw - coinAdUsd) / coinAdUsd) * 100;
-
-    console.log(coinKrw);
-    console.log(coinUsd);
-    console.log(usdC);
-    console.log(coinAdUsd);
     document.querySelector(".gimp" + coinName).innerHTML = coinRate.toFixed(2);
 
 }
