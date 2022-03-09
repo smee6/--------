@@ -3,7 +3,7 @@ let red = "rgb(255, 123, 127)";
 let blue = "rgb(72, 235, 252)";
 let upbiturl = "https://crix-api-endpoint.upbit.com/v1/crix/candles/days/?code=CRIX.UPBIT.KRW-"
 let coinList = ["btc", "eth", "eos", "xrp", "ada", "doge", "matic", "algo", "atom", "sol", "dot", "mana", "trx", "sand", "etc"];
-let gimpList = ["btc", "eth", "xrp", "doge"];
+let gimpList = ["Btc", "Eth"];
 let stockList = ["TQQQ", "QQQ", "SQQQ", "SPY", "AAPL"];
 let gimpBTC;
 let gimpETH;
@@ -27,11 +27,29 @@ function playLogic() {
     gimpList.forEach(coin => {
         getUsdCoinData(coin);
     });
+    return gimpAll();
 }
-// setTimeout(() => {
-//     gimpBTC = sessionStorage.getItem("usdC");
-//     console.log(gimpBTC);
-// }, 2000);
+
+function gimpAll() {
+    gimpList.forEach(coin => {
+        gimpCal(coin);
+    });
+}
+
+function gimpCal(coinName) {
+    let coinKrw = stringNumberToInt(sessionStorage.getItem(coinName + "Price"));
+    let coinUsd = stringNumberToInt(sessionStorage.getItem(coinName + "UsdPrice"));
+    let usdC = sessionStorage.getItem("usdC");
+    let coinAdUsd = usdC * coinUsd;
+    let coinRate = ((coinKrw - coinAdUsd) / coinAdUsd) * 100;
+
+    console.log(coinKrw);
+    console.log(coinUsd);
+    console.log(usdC);
+    console.log(coinAdUsd);
+    document.querySelector(".gimp" + coinName).innerHTML = coinRate.toFixed(2);
+
+}
 
 function getCoinData(url, coinName) {
     //upbit : https://crix-api-endpoint.upbit.com/v1/crix/candles/days/?code=CRIX.UPBIT.KRW-
@@ -52,10 +70,8 @@ function getCoinData(url, coinName) {
             if (closing_price < opening_price) document.querySelector("." + coinName + "CurPrice").style.color = blue;
             if (percent > 0) document.querySelector("." + coinName + "Fluc").style.color = red;
             if (percent < 0) document.querySelector("." + coinName + "Fluc").style.color = blue;
-            if (coinName === "btc") sessionStorage.setItem("btcPrice", dp_closing_price);
-            if (coinName === "eth") sessionStorage.setItem("ethPrice", dp_closing_price);
-            if (coinName === "xrp") sessionStorage.setItem("xrpPrice", dp_closing_price);
-            if (coinName === "doge") sessionStorage.setItem("dogePrice", dp_closing_price);
+            if (coinName === "btc") sessionStorage.setItem("BtcPrice", dp_closing_price);
+            if (coinName === "eth") sessionStorage.setItem("EthPrice", dp_closing_price);
         });
 }
 
@@ -67,10 +83,8 @@ function getUsdCoinData(coinName) {
             let coin = data[0];
             closing_price = coin.tradePrice;
             dp_closing_price = closing_price.toLocaleString();
-            if (coinName === "btc") sessionStorage.setItem("btcUsdPrice", dp_closing_price);
-            if (coinName === "eth") sessionStorage.setItem("ethUsdPrice", dp_closing_price);
-            if (coinName === "xrp") sessionStorage.setItem("xrpUsdPrice", dp_closing_price);
-            if (coinName === "doge") sessionStorage.setItem("dogeUsdPrice", dp_closing_price);
+            if (coinName === "btc") sessionStorage.setItem("BtcUsdPrice", dp_closing_price);
+            if (coinName === "eth") sessionStorage.setItem("EthUsdPrice", dp_closing_price);
         });
 }
 
@@ -93,5 +107,9 @@ fetch("https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD").t
         let chanRate = exchanRate.signedChangeRate * 100;
         document.querySelector(".nowP").innerHTML = nowP;
         document.querySelector(".chanRate").innerHTML = chanRate.toFixed(2);
-        sessionStorage.setItem("usdC", chanRate.toFixed(2));
+        sessionStorage.setItem("usdC", nowP);
     });
+
+function stringNumberToInt(stringNumber) {
+    return parseInt(stringNumber.replace(/,/g, ''));
+}
